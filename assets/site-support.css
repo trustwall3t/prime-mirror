@@ -1,0 +1,53 @@
+/* Smartsupp: tracking only — messaging is via WhatsApp */
+#smartsupp-widget-container,
+iframe#smartsupp-widget-iframe {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+#pm-whatsapp-support {
+  position: fixed;
+  bottom: 7rem;
+  right: 1rem;
+  z-index: 40;
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #25d366;
+  color: #fff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#pm-whatsapp-support:hover {
+  transform: scale(1.05);
+  background-color: #20bd5a;
+}
+
+#pm-whatsapp-support:active {
+  transform: scale(0.95);
+}
+
+#pm-whatsapp-support svg {
+  height: 1.75rem;
+  width: 1.75rem;
+  fill: currentColor;
+}
+
+@media (min-width: 640px) {
+  #pm-whatsapp-support {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  #pm-whatsapp-support svg {
+    height: 2rem;
+    width: 2rem;
+  }
+}
