@@ -1,35 +1,7 @@
 (function () {
-  var SMARTSUPP_KEY = '09b35ca3f427bdf332eef8c55fa11d9d21954042';
   var WHATSAPP_NUMBER = '+15122263001';
   var WHATSAPP_MESSAGE =
     'Hello, I need support from Prime Mirror Market.';
-
-  function hideSmartsuppWidget() {
-    if (typeof window.smartsupp === 'function') {
-      window.smartsupp('chat:hide');
-    }
-  }
-
-  window._smartsupp = window._smartsupp || {};
-  window._smartsupp.key = SMARTSUPP_KEY;
-
-  window.smartsupp ||
-    (function (d) {
-      var s,
-        c,
-        o = (window.smartsupp = function () {
-          o._.push(arguments);
-        });
-      o._ = [];
-      s = d.getElementsByTagName('script')[0];
-      c = d.createElement('script');
-      c.type = 'text/javascript';
-      c.charset = 'utf-8';
-      c.async = true;
-      c.onload = hideSmartsuppWidget;
-      c.src = 'https://www.smartsuppchat.com/loader.js?';
-      s.parentNode.insertBefore(c, s);
-    })(document);
 
   if (!WHATSAPP_NUMBER) return;
 
